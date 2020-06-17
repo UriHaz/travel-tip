@@ -1,3 +1,5 @@
+'use strict'
+
 console.log('Main!');
 
 import { locService } from './services/loc.service.js'
