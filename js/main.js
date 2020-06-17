@@ -11,7 +11,13 @@ locService.getLocs()
 window.onload = () => {
     locService.getPosition()
         .then(pos => {
-
+            
+            document.querySelector('.btn').addEventListener('click', (ev) => {
+                console.log('Aha!', ev.target);
+                // mapService.panTo(locService.getPosition().center);
+                mapService.panTo(pos.coords.latitude, pos.coords.longitude);
+            })
+            
             console.log('User position is:', pos.coords);
             mapService.initMap(pos.coords.latitude, pos.coords.longitude)
                 .then(() => {
@@ -29,8 +35,3 @@ window.onload = () => {
 
 }
 
-document.querySelector('.btn').addEventListener('click', (ev) => {
-    console.log('Aha!', ev.target);
-    // mapService.panTo(locService.getPosition().center);
-    mapService.panTo(35.6895, 139.6917);
-})
