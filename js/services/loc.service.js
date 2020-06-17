@@ -13,7 +13,6 @@ function getLocs() {
     });
 }
 
-
 function getPosition() {
     console.log('Getting Pos');
 

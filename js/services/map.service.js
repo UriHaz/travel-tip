@@ -32,7 +32,7 @@ function addMarker(loc) {
     var marker = new google.maps.Marker({
         position: loc,
         map: map,
-        title: 'address'
+        title: 'Address'
     });
     return marker;
 }
