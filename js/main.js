@@ -5,26 +5,28 @@ import { mapService } from './services/map.service.js'
 
 
 locService.getLocs()
+
     .then(locs => console.log('locs', locs))
 
 window.onload = () => {
-    mapService.initMap()
-        .then(() => {
-            
-            // mapService.addMarker(locService.getPosition());
-            mapService.addMarker({ lat: 32.0749831, lng: 34.9120554 });
-        })
-        .catch(console.log('INIT MAP ERROR'));
-
-    
     locService.getPosition()
         .then(pos => {
 
             console.log('User position is:', pos.coords);
-        })
+            mapService.initMap(pos.coords.latitude, pos.coords.longitude)
+                .then(() => {
+
+                    // mapService.addMarker(locService.getPosition());
+                    mapService.addMarker({lat:pos.coords.latitude,lng: pos.coords.longitude});
+                })
+                .catch(console.log('INIT MAP ERROR'));
+        })  
         .catch(err => {
             console.log('err!!!', err);
         })
+
+
+
 }
 
 document.querySelector('.btn').addEventListener('click', (ev) => {
