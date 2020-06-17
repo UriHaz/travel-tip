@@ -17,7 +17,7 @@ window.onload = () => {
                 // mapService.panTo(locService.getPosition().center);
                 mapService.panTo(pos.coords.latitude, pos.coords.longitude);
             })
-            
+
             console.log('User position is:', pos.coords);
             mapService.initMap(pos.coords.latitude, pos.coords.longitude)
                 .then(() => {
@@ -35,3 +35,5 @@ window.onload = () => {
 
 }
 
+
+Geocoder.geocode()
