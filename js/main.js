@@ -16,6 +16,7 @@ window.onload = () => {
         })
         .catch(console.log('INIT MAP ERROR'));
 
+    
     locService.getPosition()
         .then(pos => {
 
