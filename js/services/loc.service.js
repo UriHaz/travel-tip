@@ -12,7 +12,6 @@ function getLocs() {
     });
 }
 
-
 function getPosition() {
     console.log('Getting Pos');
 
@@ -20,9 +19,3 @@ function getPosition() {
         navigator.geolocation.getCurrentPosition(resolve, reject)
     })
 }
-
-
-
-
-
-
