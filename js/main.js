@@ -11,8 +11,8 @@ window.onload = () => {
     mapService.initMap()
         .then(() => {
             
-            mapService.addMarker(locService.getPosition());
-            // mapService.addMarker({ lat: 32.0749831, lng: 34.9120554 });
+            // mapService.addMarker(locService.getPosition());
+            mapService.addMarker({ lat: 32.0749831, lng: 34.9120554 });
         })
         .catch(console.log('INIT MAP ERROR'));
 
@@ -28,6 +28,6 @@ window.onload = () => {
 
 document.querySelector('.btn').addEventListener('click', (ev) => {
     console.log('Aha!', ev.target);
-    mapService.panTo(locService.getPosition().center);
-    // mapService.panTo(35.6895, 139.6917);
+    // mapService.panTo(locService.getPosition().center);
+    mapService.panTo(35.6895, 139.6917);
 })
