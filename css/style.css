@@ -6,48 +6,23 @@ html {
     font-family: sans-serif;
 }
 
-a {
-    text-decoration: none;
-    cursor: pointer;
+h1 {
+    font-size: 1.5rem;
+    padding: 10px;
 }
 
 button {
     padding: 5px;
     cursor: pointer;
     border-radius: 2px;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
 }
-
-button:active:not([type=submit]) {
-    box-shadow: 0 2px #666;
-    transform: translateY(4px);
-}
-
-input {
-}
-
 
 .btn {
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
     padding: 5px 10px;
     background-color: Black;
     border: 1px solid Black;
-}
-
-.bold-text {
-    font-weight: 500;
-}
-
-/* .map-area {
-    height: 600px;
-    border-radius: 2px;
-} */
-
-.fa-map-marker,
-.fa-thermometer-empty {
-    color: #5203e6;
 }
 
 .logo-link {
@@ -56,45 +31,14 @@ input {
     color: white;
 }
 
-/* .wrapper {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-areas: "header" "main" "footer";
-}
-
-.main {
-    grid-area: main;
-    display: grid;
-    grid-gap: 8px;
-    grid-template-areas: "loc-info map-info" " weather-info map-info";
-    grid-template-columns: 300px 1fr;
-}
-
-header {
-    grid-area: header;
-} */
-
 header,
 footer {
     background-color: black;
     text-align: center;
 }
-
-/* Cards */
-
-.loc-info,
-.weather-info,
-.map-info {
-    background-color: White;
-}
-
 .loc-info {
     grid-area: loc-info;
     padding: 10px;
-}
-
-.map-info {
-    grid-area: map-info;
 }
 
 .map-info>* {
@@ -105,14 +49,9 @@ footer {
     display: inline-block;
 }
 
-.btn-curr-loc {
-    margin: 0 20px;
-}
-
 form {
     position: relative;
-    grid-area: form;
-    width: 40%;
+    width: 30%;
 }
 
 form>* {
@@ -130,19 +69,7 @@ form button {
 }
 
 footer {
-    grid-area: footer;
     padding: 10px;
-}
-
-footer>p {
-    display: inline;
-    color: white;
-    font-size: 1.3em;
-}
-
-footer input.url-input {
-    width: 400px;
-    font-size: 1em;
 }
 
 .btn-copy-url {
